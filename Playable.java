@@ -13,8 +13,8 @@ public interface Playable
     void activity(); // Linear path through the class 
     void entry(); // This is where you describe the region
     int choice(); // This is where you present the user with a choice
-    void challenge(int choice);  // The choice can lead to a challenge or not
-    void exit(); // This is where you say the user is leaving the region
+    boolean challenge(int choice);  // The choice can lead to a challenge or not
+    void exit(int exitTo); // This is where you say the user is leaving the region
     String defaultResponse();
     
 

@@ -25,30 +25,30 @@ public class Davidville implements Playable
         entry();
         int choice = choice();
         challenge(choice);
-        exit();
+        exit(1);
         
     }
     
     public void entry(){
-        System.out.println("Welcome to Gustinville, blah, blah, blah");
+        System.out.println("Welcome to Davidville, blah, blah, blah");
     }
     public int choice(){
-        System.out.println("You spotted a letter in the road, what do you want to do?");
+        System.out.println("You did you read the letter yet?");
         String response = userInput.nextLine();
         int choice = 0;
         if(response.toUpperCase().contains("PICK")) choice = 1;
         return choice;
     }
-    public void challenge(int choice){
+    public boolean challenge(int choice){
         String challenge = defaultResponse();
         switch(choice){
             case 1: challenge = "Now you need to do this";
         }
         System.out.println(challenge);
+        return false;
     }
-    public void exit(){
-        System.out.println("You are moving to Davidville.");
-        new Davidville(name, gender);
+    public void exit(int exitTo){
+        System.out.println("Game over.");
     }
     
     public String defaultResponse(){

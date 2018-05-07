@@ -26,8 +26,7 @@ public class Gustinville implements Playable
     public void activity(){
         entry();
         int choice = choice();
-        challenge(choice);
-        exit();
+        if(challenge(choice)) exit(1);
         
     }
     
@@ -41,20 +40,24 @@ public class Gustinville implements Playable
         if(response.toUpperCase().contains("PICK")) choice = 1;
         return choice;
     }
-    public void challenge(int choice){
+    public boolean challenge(int choice){
         String challenge = defaultResponse();
+        boolean readyToExit = false;
         switch(choice){
-            case 1: challenge = "Now you need to do this";
+            case 1: challenge = "Because you picked it up, ";
+                    readyToExit = true;
+                    break;
         }
         System.out.println(challenge);
+        return readyToExit;
     }
-    public void exit(){
-        System.out.println("You are moving to Davidville.");
+    public void exit(int exitTo){
+        if(exitTo == 1) System.out.println("You are moving to Davidville.");
         Playable player = new Davidville(name, gender);
     }
     
     public String defaultResponse(){
-        return "";
+        return "What kind of choice is that?";
     
     }
 
