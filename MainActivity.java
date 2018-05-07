@@ -9,6 +9,6 @@ public class MainActivity
 {
     
     public static void main(String[] args) {
-        Voice player = new OpeningScene("Gretchen");
+        Voice player = new Gustinville("Gretchen");
     }
 }
