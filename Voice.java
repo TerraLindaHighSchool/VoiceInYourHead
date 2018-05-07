@@ -2,23 +2,36 @@
 /**
  * Abstract class Voice - write a description of the class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Bruce Gustin
+ * @version 5/6/2018
  */
+
+import java.util.Scanner;
+
 public abstract class Voice
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String name;
+    private char gender;
+    
+    /***************************************
+     * Getters and Setters
+     ***************************************/
+     
+     public void setName(String name) {
+         this.name = name;
+     }
+     
+     public String getName(){
+         return name;
+     }
+     
+     public void setGender(char gender) {
+         this.gender = gender;
+     }
+     
+     public char getGender(){
+         return gender;
+     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+
 }
