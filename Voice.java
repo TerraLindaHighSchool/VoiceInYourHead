@@ -16,25 +16,48 @@ public abstract class Voice
     public Voice(String name){
         this.name = name;
     }
+    
+    /***************************************
+    * Abstract Methods
+    ***************************************/
+     
+    public abstract String findWord(String ui);
+    
     /***************************************
      * Getters and Setters
      ***************************************/
      
-     public void setName(String n) {
+    public void setName(String n) {
          name = n;
      }
      
-     public String getName(){
+    public String getName(){
          return name;
-     }
+    }
      
-     public void setGender(char g) {
+    public void setGender(char g) {
          gender = g;
-     }
+    }
      
-     public char getGender(){
+    public char getGender(){
          return gender;
-     }
-
-
+    }
+     
+    /***************************************
+    * Concrete Methods
+    ***************************************/
+    
+    public String eliminateInvalidCharacters(String ui)
+    {
+         int charUnicode;
+         String uiAlphaOnly = "";
+         ui = ui.toUpperCase(); 
+         for(int i = 0; i < ui.length();i++)
+         {
+              charUnicode = (int) ui.charAt(i);
+              if((charUnicode >= 65) && (charUnicode <= 90)) 
+                  uiAlphaOnly += ui.charAt(i);
+         }
+         return uiAlphaOnly;
+    } 
 }

@@ -13,5 +13,9 @@ public class Scene2 extends Voice
         super(name);
         System.out.println("Scene2");
     }
+    
+    public String findWord(String ui){
+        return "";
+    }
 
 }
