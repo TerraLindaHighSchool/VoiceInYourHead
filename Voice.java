@@ -21,11 +21,10 @@ public abstract class Voice
     * Abstract Methods
     ***************************************/
      
-    public abstract String entry();
-    public abstract String choice();
-    public abstract String challenge();
-    public abstract String exit();
-    public abstract String toString(String ui);
+    public abstract void entry(); // This is where you describe the region
+    public abstract int choice(); // This is where you present the user with a choice
+    public abstract void challenge(int choice);  // The choice can lead to a challenge or not
+    public abstract void exit(); // This is where you say the user is leaving the region
     
     /***************************************
      * Getters and Setters
@@ -65,7 +64,7 @@ public abstract class Voice
          return uiAlphaOnly;
     } 
     
-        public String defaultRandom()
+        public String defaultResponse()
 	{
 		String reply = "Your questions are very thoughtful.";
 		int rint = (int) (Math.random() * 6);
