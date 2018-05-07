@@ -10,16 +10,14 @@
 
 import java.util.Scanner;
 
-public class Gustinville implements Playable
+public class Davidville implements Playable
 {
     private Scanner userInput;
-    String name, gender;
+    private String name, gender;
     
-    public Gustinville(String name, String gender)
+    public Davidville(String name, String gender)
     {
         userInput = new Scanner(System.in);
-        this.name = name;
-        this.gender = gender;
         activity();
     }
     
@@ -50,7 +48,7 @@ public class Gustinville implements Playable
     }
     public void exit(){
         System.out.println("You are moving to Davidville.");
-        Playable player = new Davidville(name, gender);
+        new Davidville(name, gender);
     }
     
     public String defaultResponse(){
