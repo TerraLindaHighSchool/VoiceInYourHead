@@ -10,9 +10,9 @@
 public class Gustinville extends Voice
 {
 
-    public Gustinville(String name)
+    public Gustinville(String name, String gender)
     {
-        super(name);
+        super(name, gender);
     }
     
     public String entry(){

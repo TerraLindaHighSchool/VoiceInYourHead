@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public abstract class Voice
 {
-    private String name;
-    private char gender;
+    private String name, gender;
     
-    public Voice(String name){
+    public Voice(String name, String gender){
         this.name = name;
+        this.gender = gender;
     }
     
     /***************************************
@@ -39,11 +39,11 @@ public abstract class Voice
          return name;
     }
      
-    public void setGender(char g) {
+    public void setGender(String g) {
          gender = g;
     }
      
-    public char getGender(){
+    public String getGender(){
          return gender;
     }
      
