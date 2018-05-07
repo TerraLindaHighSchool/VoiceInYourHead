@@ -21,7 +21,11 @@ public abstract class Voice
     * Abstract Methods
     ***************************************/
      
-    public abstract String findWord(String ui);
+    public abstract String entry();
+    public abstract String choice();
+    public abstract String challenge();
+    public abstract String exit();
+    public abstract String toString(String ui);
     
     /***************************************
      * Getters and Setters
@@ -60,4 +64,25 @@ public abstract class Voice
          }
          return uiAlphaOnly;
     } 
+    
+        public String defaultRandom()
+	{
+		String reply = "Your questions are very thoughtful.";
+		int rint = (int) (Math.random() * 6);
+		
+		switch(rint)
+		{
+		    case 0: reply = "That is a very interesting question.";
+			    break;
+		    case 1: reply = "I will need to think about that.";
+		            break;
+		    case 2: reply = "Is that really the question that you want to ask?";
+		            break;
+		    case 3: reply = "That is a very complicated question.";
+		            break;    
+		    case 4: reply = "I'm sorry, I do not understand the question.";
+		            break;  
+		}
+		return reply;
+	}
 }
