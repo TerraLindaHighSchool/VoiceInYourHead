@@ -17,6 +17,6 @@ public class MainActivity
         String name = userInput.nextLine();
         System.out.println("What would you like your gender to be? M/F");
         String gender = userInput.nextLine();
-        Playable player = new Gustinville(name, gender);
+        Playable player = new OpeningScene(name, gender);
     }
 }

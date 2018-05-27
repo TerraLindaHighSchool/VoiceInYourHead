@@ -1,24 +1,29 @@
 
 /**
- * Abstract class Voice - write a description of the class here
+ * A blueprint of all scenes in Voice in Your Head
  *
  * @author Bruce Gustin
- * @version 5/6/2018
+ * @version 5/27/2018
  */
 
 
 
 public interface Playable
 {
-    void activity();            // Called by region constructor, this method is call each of the next 4 methods in sequence
+    void activity();                    // Called by view constructor, The activity determines the sequence
+                                        // of events for the region.  It would generally go straight to an 
+                                        // entry and then a challenge or choice.  This could lead 
+                                        // to other challenges, choices, or an exit.
     
-    void entry();               // 1st method called by activity. Designed to describe the region.
+    void entry();                       // 1st method called by activity. Designed to describe the region.
+                                                                
+    boolean challenge(int choice);      // Designed to present the user with challenges, either personal 
+                                        // or from the antagonist.  Challenge could also be the result of a choice.
     
-    int choice();               // 2nd method called by activity.  Designed to present user with choices.  
-                                // Each choice is given a numeric value which gets passed to the challenge method. 
-    int challenge(int choice);  // The challenges.  Successful challenges lead to the exit choices
+    int choice(boolean metChallenge);   // Designed to present user with choices.  
     
-    void exit(int exitTo);      // Passes user to next region
+    void exit(int choice);              // Uses polymorphism to convert the palyable object to the next scene.  
+                                        //Passes user name and gender.
     
-    String defaultResponse();   // Used for default responses
+    String defaultResponse();           // Used for default responses.
 }
