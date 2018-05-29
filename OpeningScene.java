@@ -14,7 +14,7 @@ public class OpeningScene implements Playable
     private Scanner userInput;
     String name, gender;
     
-    public OpeningScene(String name, String gender)
+    public OpeningScene(String name)
     {
         this.name = name;
         this.gender = gender;
