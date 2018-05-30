@@ -21,13 +21,13 @@ public class MainActivity
                            "4. To be determined\n");           
         Playable player;
             switch(userInput.nextInt()) {
-            case 1: player = new OpeningScene(name);
+            case 1: player = new Tangerine(name);
                     break;
-            case 2: player = new OpeningScene(name);
+            case 2: player = new ForgeWeapon(name);
                     break;
-            case 3: player = new OpeningScene(name);
+            case 3: player = new TBD(name);
                     break;
-            case 4: player = new OpeningScene(name);
+            case 4: player = new TBD(name);
                     break;
             default: System.out.println("No such choice.");
         }
