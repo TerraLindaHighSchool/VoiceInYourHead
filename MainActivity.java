@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class MainActivity here.
+ * Opening activity that allows the user to pick their opening scene.
  *
  * @author Bruce Gustin
  * @version 5/6/2018
