@@ -2,8 +2,8 @@
 /**
  * Players pick 3 out of several weapons to equip their army with.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Meaghan B
+ * 5/31/18
  */
 public class ForgeWeapons implements Playable
 {
